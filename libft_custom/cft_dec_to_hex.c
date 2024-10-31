@@ -6,7 +6,7 @@
 /*   By: nveneros <nveneros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 17:36:38 by nveneros          #+#    #+#             */
-/*   Updated: 2024/10/30 18:37:56 by nveneros         ###   ########.fr       */
+/*   Updated: 2024/10/31 15:34:50 by nveneros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ int	get_length_dec_to_hex(long nb)
 
 char	figure_to_hex(int figure, char config)
 {
-	char output;
-	char *base;
+	char	output;
+	char	*base;
 
 	if (config == CONFIG_LOWER)
 		base = ft_strdup("0123456789abcdef");
@@ -37,18 +37,18 @@ char	figure_to_hex(int figure, char config)
 		base = ft_strdup("0123456789ABCDEF");
 	output = base[figure];
 	free(base);
-	return output;
+	return (output);
 }
 
 char	*cft_dec_to_hex(long nb, char config)
 {
-	char *output;
-	unsigned int length;
-	unsigned	i;
+	char			*output;
+	unsigned int	length;
+	unsigned int	i;
 
 	length = get_length_dec_to_hex(nb);
 	i = length - 1;
-	output = malloc((length + 1 ) * sizeof(char));
+	output = malloc((length + 1) * sizeof(char));
 	while (nb / 16)
 	{
 		output[i] = figure_to_hex(nb % 16, config);
