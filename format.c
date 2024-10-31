@@ -6,7 +6,7 @@
 /*   By: nveneros <nveneros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:27:50 by nveneros          #+#    #+#             */
-/*   Updated: 2024/10/30 17:17:57 by nveneros         ###   ########.fr       */
+/*   Updated: 2024/10/31 15:26:33 by nveneros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,14 @@ int	c_is_in_formats(char c, char *group_formats)
 	return (0);
 }
 
-int check_format(const char *str, char *group_formats)
+int	check_format(const char *str, char *group_formats)
 {
 	if (*str == '%' && c_is_in_formats(*(++str), group_formats))
-			return (1);
+		return (1);
 	return (0);
 }
 
-
-int format_is_not_valid(char percent, char format)
+int	format_is_not_valid(char percent, char format)
 {
 	int	i;
 
