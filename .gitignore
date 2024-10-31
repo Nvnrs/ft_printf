@@ -2,3 +2,6 @@ a.out
 .vscode
 libft.a
 libftprintf.a
+libftprintf.a
+*.o
+*/*.o

@@ -6,7 +6,7 @@
 /*   By: nveneros <nveneros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:48:07 by nveneros          #+#    #+#             */
-/*   Updated: 2024/10/31 15:31:57 by nveneros         ###   ########.fr       */
+/*   Updated: 2024/10/31 16:31:30 by nveneros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	handle_formats(const char *format, va_list *ap)
 {
 	int	length;
 
+	length = 0;
 	if (check_format(format, FORMAT_C))
 		length += treatment_char(ap);
 	else if (check_format(format, FORMAT_S))
