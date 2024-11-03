@@ -26,7 +26,8 @@ libft_fclean :
 %.o: %.c
 		gcc $(CFLAGS) -c $< -o $@
 
-$(NAME) : $(OBJ)
+$(NAME) : $(LIBFT) $(OBJ)
+		cp $(LIBFT) $(NAME)
 		ar -rcs $(NAME) $(OBJ)
 
 test : $(OBJ) $(LIBFT)

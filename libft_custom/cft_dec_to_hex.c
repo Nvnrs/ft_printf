@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cft_dec_to_hex.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nveneros <nveneros@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 17:36:38 by nveneros          #+#    #+#             */
-/*   Updated: 2024/11/03 16:02:57 by nveneros         ###   ########.fr       */
+/*   Updated: 2024/11/03 22:22:52 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ char	figure_to_hex(int figure, char config)
 	char	output;
 	char	*base;
 
+	base = NULL;
 	if (config == CONFIG_LOWER)
 		base = ft_strdup("0123456789abcdef");
 	else if (config == CONFIG_UPPER)
