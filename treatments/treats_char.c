@@ -6,11 +6,12 @@
 /*   By: nveneros <nveneros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 14:45:49 by nveneros          #+#    #+#             */
-/*   Updated: 2024/10/31 15:18:46 by nveneros         ###   ########.fr       */
+/*   Updated: 2024/11/03 15:05:20 by nveneros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
+# define MSG_NULL "(null)"
 
 int	treatment_char(va_list *ap)
 {
@@ -27,6 +28,8 @@ int	treatment_str(va_list *ap)
 	int		length;
 
 	s = va_arg(*ap, char *);
+	if (s == NULL)
+		s = MSG_NULL;
 	ft_putstr_fd(s, 1);
 	length = ft_strlen(s);
 	return (length);

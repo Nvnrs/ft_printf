@@ -6,11 +6,12 @@
 /*   By: nveneros <nveneros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 14:44:37 by nveneros          #+#    #+#             */
-/*   Updated: 2024/10/31 15:20:16 by nveneros         ###   ########.fr       */
+/*   Updated: 2024/11/03 16:18:10 by nveneros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
+# define MSG_NIL "(nil)"
 
 int	treatment_int(va_list *ap)
 {
@@ -35,7 +36,7 @@ int	treatment_unsigned_int(va_list *ap, char format)
 	if (format == 'u')
 	{
 		length = cft_length_nbr(nb);
-		cft_putnbr_fd(nb, 1);
+		cft_putnbr_UL_fd(nb, 1);
 	}
 	else if (format == 'x' || format == 'X')
 	{
@@ -58,6 +59,12 @@ int	treatment_pointer(va_list *ap)
 	int				length;
 
 	nb = va_arg(*ap, unsigned long);
+	if (nb == 0)
+	{
+		ft_putstr_fd(MSG_NIL, 1);
+		length = ft_strlen(MSG_NIL);
+		return (length);
+	}
 	hex = cft_dec_to_hex(nb, CONFIG_LOWER);
 	ft_putstr_fd("0x", 1);
 	ft_putstr_fd(hex, 1);

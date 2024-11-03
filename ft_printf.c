@@ -6,7 +6,7 @@
 /*   By: nveneros <nveneros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:48:07 by nveneros          #+#    #+#             */
-/*   Updated: 2024/10/31 16:31:30 by nveneros         ###   ########.fr       */
+/*   Updated: 2024/11/03 18:05:04 by nveneros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,56 +56,3 @@ int	ft_printf(const char *format, ...)
 	va_end(ap);
 	return (length);
 }
-
-// int	main(void)
-// {
-// 	int	length;
-// 	int	length_real;
-
-// 	// %s
-// 	printf("____TEST  %%s\n");
-// 	length = ft_printf("output: %s\n", "CHAINE_S");
-// 	length_real = printf("expected: %s\n\n", "CHAINE_S");
-
-// 	// %c
-// 	printf("____TEST %%c\n");
-// 	length = ft_printf("output: %c\n", 'c');
-// 	length_real = printf("expected: %c\n\n", 'c');
-
-// 	// %i
-// 	printf("____TEST %%d\n");
-// 	length = ft_printf("output: %d\n", -2147483647);
-// 	length_real = printf("expected: %d\n\n", -2147483647);
-
-// 	printf("____TEST %%i\n");
-// 	length = ft_printf("output: %i\n", 2147483647);
-// 	length_real = printf("expected: %i\n\n", 2147483647);
-
-// 	// %u
-// 	printf("____TEST %%u\n");
-// 	length = ft_printf("output: %u\n", 4294967295U);
-// 	length_real = printf("expected: %u\n\n", 4294967295U);
-
-// 	// %x
-// 	printf("____TEST %%x\n");
-// 	length = ft_printf("output: %x\n", 58);
-// 	length_real = printf("expected: %x\n\n", 58);
-
-// 	// %X
-// 	printf("____TEST %%X\n");
-// 	length = ft_printf("output: %X\n", 455);
-// 	length_real = printf("expected: %X\n\n", 455);
-
-// 	//  A VOIR
-// 	printf("____TEST %%\n");
-// 	length = ft_printf("output: %%\n");
-// 	length_real = printf("expected: %%\n\n");
-
-// 	//  %p
-// 	int test = 10;
-// 	printf("____TEST %%p\n");
-// 	length = ft_printf("output: %p\n", &test);
-// 	length_real = printf("expected: %p\n\n", &test);
-
-// 	return (0);
-// }

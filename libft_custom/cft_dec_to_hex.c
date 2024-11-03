@@ -6,13 +6,13 @@
 /*   By: nveneros <nveneros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 17:36:38 by nveneros          #+#    #+#             */
-/*   Updated: 2024/10/31 15:34:50 by nveneros         ###   ########.fr       */
+/*   Updated: 2024/11/03 16:02:57 by nveneros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_custom.h"
 
-int	get_length_dec_to_hex(long nb)
+int	get_length_dec_to_hex(unsigned long nb)
 {
 	unsigned int	length;
 
@@ -40,7 +40,7 @@ char	figure_to_hex(int figure, char config)
 	return (output);
 }
 
-char	*cft_dec_to_hex(long nb, char config)
+char	*cft_dec_to_hex(unsigned long nb, char config)
 {
 	char			*output;
 	unsigned int	length;

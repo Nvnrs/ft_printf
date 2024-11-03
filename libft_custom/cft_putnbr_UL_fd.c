@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cft_putnbr_fd.c                                    :+:      :+:    :+:   */
+/*   cft_putnbr_UL_fd.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nveneros <nveneros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 17:12:19 by nveneros          #+#    #+#             */
-/*   Updated: 2024/10/31 15:36:24 by nveneros         ###   ########.fr       */
+/*   Updated: 2024/11/03 16:18:25 by nveneros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_custom.h"
 
-void	cft_putnbr_fd(long n, int fd)
+void	cft_putnbr_UL_fd(unsigned long nb, int fd)
 {
-	long	nb;
-
-	nb = n;
-	if (nb < 0)
-	{
-		ft_putchar_fd('-', fd);
-		nb *= -1;
-	}
 	if (nb >= 10)
 	{
-		cft_putnbr_fd(nb / 10, fd);
-		cft_putnbr_fd(nb % 10, fd);
+		cft_putnbr_UL_fd(nb / 10, fd);
+		cft_putnbr_UL_fd(nb % 10, fd);
 	}
 	else
 	{
