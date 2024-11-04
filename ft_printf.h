@@ -6,7 +6,7 @@
 /*   By: nveneros <nveneros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:37:09 by nveneros          #+#    #+#             */
-/*   Updated: 2024/11/03 15:00:43 by nveneros         ###   ########.fr       */
+/*   Updated: 2024/11/04 11:46:20 by nveneros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@
 
 int	ft_printf(const char *format, ...);
 int	check_format(const char *str, char *group_formats);
-int	format_is_not_valid(char percent, char format);
 
 // TREATEMENT FORMAT
 int	treatment_int(va_list *ap);

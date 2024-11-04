@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cft_dec_to_hex.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nveneros <nveneros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 17:36:38 by nveneros          #+#    #+#             */
-/*   Updated: 2024/11/03 22:22:52 by nicolas          ###   ########.fr       */
+/*   Updated: 2024/11/04 12:37:13 by nveneros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	*cft_dec_to_hex(unsigned long nb, char config)
 		nb = nb / 16;
 		i--;
 	}
-	output[i] = figure_to_hex(nb % 16, config);
+	output[i] = figure_to_hex(nb, config);
 	output[length] = '\0';
 	return (output);
 }
