@@ -1,6 +1,6 @@
 SRC = ./libft_custom/cft_dec_to_hex.c \
 	./libft_custom/cft_length_nbr.c \
-	./libft_custom/cft_putnbr_UL_fd.c \
+	./libft_custom/cft_putnbr_ui_fd.c \
 	./treatments/treats_char.c \
 	./treatments/treats_integer.c \
 	./format.c \
@@ -31,7 +31,7 @@ $(NAME) : $(LIBFT) $(OBJ)
 		ar -rcs $(NAME) $(OBJ)
 
 test : $(OBJ) $(LIBFT)
-		gcc $(OBJ) main.c $(LIBFT) -o $(EXEC)
+		gcc $(OBJ) .main.c $(LIBFT) -o $(EXEC)
 
 clean : libft_clean
 		rm -rf $(OBJ)
@@ -41,4 +41,4 @@ fclean : clean libft_fclean
 
 re : fclean all
 
-.PHONY : clean
+.PHONY : clean re fclean test libft_clean libft_fclean all

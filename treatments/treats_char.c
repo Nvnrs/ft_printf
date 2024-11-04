@@ -6,12 +6,12 @@
 /*   By: nveneros <nveneros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 14:45:49 by nveneros          #+#    #+#             */
-/*   Updated: 2024/11/03 15:05:20 by nveneros         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:53:34 by nveneros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
-# define MSG_NULL "(null)"
+#define MSG_NULL "(null)"
 
 int	treatment_char(va_list *ap)
 {
